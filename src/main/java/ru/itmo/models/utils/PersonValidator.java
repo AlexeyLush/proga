@@ -1,4 +1,4 @@
-package ru.itmo.utils;
+package ru.itmo.models.utils;
 
 
 import ru.itmo.models.Person;

@@ -2,9 +2,7 @@ package ru.itmo.commands;
 
 
 
-import ru.itmo.commands.interactives.add.AddInteractiveCoordinate;
 import ru.itmo.commands.interactives.add.AddInteractiveLabWork;
-import ru.itmo.commands.interactives.add.AddInteractivePerson;
 import ru.itmo.commands.interactives.utills.QuestionInteractive;
 import ru.itmo.commands.request.CommandRequest;
 import ru.itmo.commands.request.RequestType;
@@ -34,8 +32,8 @@ public class AddCommand extends Command {
 
         Coordinates coordinates = new Coordinates();
 
-        AddInteractiveCoordinate.interactiveX(coordinates, scanner);
-        AddInteractiveCoordinate.interactiveY(coordinates, scanner);
+        AddInteractiveLabWork.interactiveX(coordinates, scanner);
+        AddInteractiveLabWork.interactiveY(coordinates, scanner);
 
         labWork.setCoordinates(coordinates);
 
@@ -49,7 +47,7 @@ public class AddCommand extends Command {
 
         if (QuestionInteractive.yesOrNoQuestion("Вы хотите добавить автора?", scanner)) {
             Person author = new Person();
-            AddInteractivePerson.interactivePerson(author, scanner);
+            AddInteractiveLabWork.interactivePerson(author, scanner);
             labWork.setAuthor(author);
         }
 
